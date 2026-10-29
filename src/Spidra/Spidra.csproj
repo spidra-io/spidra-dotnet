@@ -7,11 +7,11 @@
     <LangVersion>12</LangVersion>
 
     <PackageId>Spidra</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Spidra</Authors>
     <Company>Spidra</Company>
-    <Description>Official .NET SDK for Spidra — AI-powered web scraping API with proxy rotation and CAPTCHA handling.</Description>
-    <PackageTags>spidra;web-scraping;scraping;ai;html;captcha;proxy;playwright;selenium</PackageTags>
+    <Description>Official .NET SDK for Spidra — AI-powered web scraping, search, document parsing, site crawling, turnkey templates, presets, and scheduled monitors.</Description>
+    <PackageTags>spidra;web-scraping;scraping;ai;search;crawler;parsing;monitors;templates;automation</PackageTags>
     <PackageProjectUrl>https://spidra.io</PackageProjectUrl>
     <RepositoryUrl>https://github.com/spidra-io/spidra-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

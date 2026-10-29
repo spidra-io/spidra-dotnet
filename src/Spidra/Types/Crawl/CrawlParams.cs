@@ -19,5 +19,21 @@ public class CrawlParams
     public int MaxPages { get; set; }
 
     [JsonPropertyName("useProxy")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool UseProxy { get; set; }
+
+    [JsonPropertyName("proxyCountry")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? ProxyCountry { get; set; }
+
+    [JsonPropertyName("cookies")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Cookies { get; set; }
+
+    public static CrawlParams ForUrl(string baseUrl, string? crawlInstruction = null, string? transformInstruction = null) => new()
+    {
+        BaseUrl = baseUrl,
+        CrawlInstruction = crawlInstruction ?? "Follow all internal links",
+        TransformInstruction = transformInstruction
+    };
 }

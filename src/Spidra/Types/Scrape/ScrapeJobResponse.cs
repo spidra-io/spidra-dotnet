@@ -11,5 +11,8 @@ public class ScrapeJobResponse
     public required string Status { get; set; }
 
     [JsonPropertyName("result")]
-    public ScrapeResult Result { get; set; } = new();
+    public ScrapeResult? Result { get; set; }
+
+    [JsonPropertyName("error")]
+    public string? Error { get; set; }
 }

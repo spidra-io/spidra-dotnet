@@ -4,15 +4,21 @@ namespace Spidra.Types.Usage;
 
 public class UsageResponse
 {
-    [JsonPropertyName("creditsUsed")]
-    public int CreditsUsed { get; set; }
+    [JsonPropertyName("data")]
+    public List<UsageRow> Data { get; set; } = [];
+}
 
-    [JsonPropertyName("creditsRemaining")]
-    public int CreditsRemaining { get; set; }
+public class UsageRow
+{
+    [JsonPropertyName("date")]
+    public required string Date { get; set; }
 
-    [JsonPropertyName("creditsTotal")]
-    public int CreditsTotal { get; set; }
+    [JsonPropertyName("requests")]
+    public int Requests { get; set; }
 
-    [JsonPropertyName("plan")]
-    public string? Plan { get; set; }
+    [JsonPropertyName("credits")]
+    public double Credits { get; set; }
+
+    [JsonPropertyName("tokens")]
+    public int Tokens { get; set; }
 }
